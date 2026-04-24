@@ -1,5 +1,7 @@
 <?php
 
+// SDLT rates based on HMRC guidance (England, current as of 2024/2025)
+
 return [
     'standard' => [
         ['limit' => 250000, 'rate' => 0],

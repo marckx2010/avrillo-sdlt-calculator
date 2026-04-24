@@ -37,6 +37,11 @@ class SDLTController extends Controller
             $request->has('additional_property')
         );
 
-        return view('sdlt', compact('result'));
+        return view('sdlt', [
+            'result' => $result,
+            'price' => $validated['price'],
+            'first_time_buyer' => $request->has('first_time_buyer'),
+            'additional_property' => $request->has('additional_property'),
+        ]);
     }
 }

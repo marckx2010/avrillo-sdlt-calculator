@@ -9,7 +9,7 @@
 
         <div class="mb-3 w-25">
             <label class="form-label">Property Price (£)</label>
-            <input type="number" name="price" class="form-control" value="{{ old('price') }}" required>
+            <input type="number" name="price" class="form-control" value="{{ old('price', $price ?? '') }}" required>
         </div>
 
         <div class="mb-3">
@@ -17,7 +17,7 @@
                 <input type="checkbox" name="first_time_buyer"
                        class="form-check-input"
                        id="ftb"
-                    {{ old('first_time_buyer') ? 'checked' : '' }}>
+                    {{ old('first_time_buyer', $first_time_buyer ?? false) ? 'checked' : '' }}>
                 <label class="form-check-label" for="ftb">
                     First-time buyer
                 </label>
@@ -27,7 +27,7 @@
                 <input type="checkbox" name="additional_property"
                        class="form-check-input"
                        id="add"
-                    {{ old('additional_property') ? 'checked' : '' }}>
+                    {{ old('additional_property', $additional_property ?? false) ? 'checked' : '' }}>
                 <label class="form-check-label" for="add">
                     Additional property
                 </label>
